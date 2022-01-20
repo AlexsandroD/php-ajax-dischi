@@ -4,10 +4,17 @@ const app = new Vue({
         database: [],
     },
     created() {
-        axios.get("http://localhost/php-ajax-dischi/backend.php")
+        axios.get("http://localhost/php-ajax-dischi/backend.php" , {
+  
+        })
             .then((response) => {
                 this.database = response.data;
-            });
+            })
+        
+              .catch(function (error) {
+                  // handle error
+                  console.log(error);
+              })
     }
 });
 

@@ -1,4 +1,5 @@
- <?php
+<?php
+header('Access-Control-Allow-Origin: *');
 $database = [
 	[
 		"poster" =>"https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
@@ -75,4 +76,3 @@ $database = [
 header("Content-Type: application/json");
 
 echo json_encode($database);
-
